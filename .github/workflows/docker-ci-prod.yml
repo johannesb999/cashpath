@@ -29,7 +29,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:main
+            ghcr.io/${{ github.repository }}:test
             ghcr.io/${{ github.repository }}:${{ github.ref_name }}
             ghcr.io/${{ github.repository }}:run-${{ github.run_id }}-${{ github.run_attempt }}
             ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
