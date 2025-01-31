@@ -2,8 +2,8 @@ name: prod docker ci (storybook)
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - main
 
 permissions:
   packages: write
