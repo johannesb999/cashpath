@@ -1,14 +1,3 @@
-#
-#  This file is a template for the docker ci prod workflow
-#  The pipeline is triggered on push to a tag that starts with 'v'
-#  The pipeline builds and pushes the docker image to the Github Packages Registry
-#
-#  This file was generated using the command: `bump --setup-workflows`
-#  To install bump run the command: `npm install -g @itmr-dev/bump`
-#
-#  For more information, visit:
-#  https://github.com/itmr-dev/bump
-#
 
 name: prod docker ci (@itmr.dev/bump)
 
@@ -16,6 +5,10 @@ on:
   push:
     branches:
       - main
+      
+permissions:
+  packages: write
+  contents: read
 
 jobs:
   build_and_deploy:
