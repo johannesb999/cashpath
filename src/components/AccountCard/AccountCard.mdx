@@ -1,0 +1,98 @@
+import { Canvas, Meta, ArgTypes } from '@storybook/blocks';
+import * as AccountCardStories from './AccountCard.stories';
+
+<Meta of={AccountCardStories} />
+
+# AccountCard-Komponente
+---
+Die **AccountCard**-Komponente zeigt Informationen zu einem Konto oder Vertrag an, einschließlich Name, Bild, Beschreibung, Kontostand und anderer relevanter Details. Sie eignet sich zur Darstellung von Finanz- oder Vertragsdaten in einer übersichtlichen und ansprechenden Weise.
+
+
+
+## Eigenschaften (Props)
+
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`title`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Name des Kontos oder Vertrags.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`img`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Bild des Kontos oder Dienstes (z. B. Logo).</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`alt`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Alternativer Text für das Bild (Barrierefreiheit).</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`description`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Zusätzliche Informationen, z. B. IBAN oder Vertragsdetails.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`balance`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der aktuelle Kontostand oder Betrag.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`liquid`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob das Konto liquide ist.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`total`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Die Gesamtsumme, die für einen Dienst ausgegeben wurde (nur Fixkosten-Variante).</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Varianten
+
+### Standard
+
+Die Standard-Variante zeigt die grundlegenden Informationen eines Kontos an, einschließlich Name, Bild, Beschreibung und Kontostand.
+
+<Canvas of={AccountCardStories.Default} />
+
+**Beispiel:**
+```tsx
+<AccountCard
+  title="N26"
+  img={Image}
+  alt="Logo von N26"
+  description="DE250420.....5385"
+  balance={1300}
+  liquid={true}
+/>
+```
+
+### Fixkosten
+Die Fixkosten Variante zeigt die Informationen eines Vertrages, den man abegschlossen hat: Name, Bild, monatliche Kosten, bisherige Ausgaben und bis wann es möglich ist ihn zu kündigen.
+
+<Canvas of={AccountCardStories.Fixkosten} />
+
+**Beispiel:**
+```tsx
+<AccountCard
+  title= 'Netflix'
+  img= {Netflix}
+  alt= "Netflix logo"
+  description= 'künbar bis 15.02.25'
+  balance= {1300}
+  total= {200}
+/>

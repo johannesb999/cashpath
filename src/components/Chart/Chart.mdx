@@ -1,0 +1,65 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ChartStories from './Chart.stories';
+
+<Meta of={ChartStories} />
+
+# Chart-Komponente
+---
+
+Die **Chart**-Komponente dient zur Visualisierung der Portfolio-Performance über einen bestimmten Zeitraum. Sie zeigt Zeitreihendaten sowie zusätzliche Informationen wie den aktuellen Portfolio-Wert und den investierten Betrag.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`data`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`object`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Die Zeitreihendaten, die für die Darstellung der Portfolio-Performance verwendet werden.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`isValue`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der aktuelle Wert des Portfolios. Beeinflusst die Farbgebung der Linie.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`payedValue`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der investierte Betrag.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`period`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Zeitraum den der Chart anzeigt.</td>
+    </tr> 
+    </tbody> 
+</table>
+
+
+
+## Varianten
+
+### Standard
+
+Die Standard-Variante zeigt die Portfolio-Performance über den Zeitraum eines Monats an und verwendet Standardwerte für den aktuellen Portfolio-Wert und den investierten Betrag.
+
+<Canvas of={ChartStories.Default} />
+
+**Beispiel:**
+```tsx
+<Chart
+  data={{
+    dates: ['2023-01-01', '2023-01-02', '2023-01-03'],
+    values: [100, 105, 110],
+  }}
+  isValue={110}
+  payedValue={100}
+/>

@@ -1,0 +1,52 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as BrokerStories from './Broker.stories';
+
+<Meta of={BrokerStories} />
+
+# Broker
+---
+Die **Broker**-Komponente zeigt eine Liste von Brokern an. Sie kann verwendet werden, um eine übersichtliche Darstellung von Bildern mit Beschreibungen bereitzustellen.
+
+
+## Eigenschaften (Props)
+
+Die Komponente unterstützt die folgenden Eigenschaften:
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Typ</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>value</td>
+      <td>Number</td>
+      <td>Der Wert, der von der Komponente angezeigt wird.</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>String</td>
+      <td>Der Text, der neben dem Wert angezeigt wird.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Standard
+
+Die Standard-Variante zeigt eine Liste von Brokern mit Bild und Beschreibung.
+
+<Canvas of={BrokerStories._Broker} />
+
+**Beispiel:**
+
+```tsx
+<Broker
+  items={[
+    { src: Bison, description: 'Bison-broker' },
+    { src: C24, description: 'C24-broker' },
+    { src: Trade, description: 'Trade-broker' },
+  ]}
+/>

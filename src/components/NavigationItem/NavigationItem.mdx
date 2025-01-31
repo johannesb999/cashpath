@@ -1,0 +1,67 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as NavigationItemStories from './NavigationItem.stories';
+
+<Meta of={NavigationItemStories} />
+
+# NavigationItem-Komponente
+---
+Die **NavigationItem**-Komponente ist ein einzelnes Navigationselement innerhalb einer Navigationsleiste (Siehe NavigationBar).
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`icon`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`JSX.Element`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das Icon, das das Navigationselement repräsentiert.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`label`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das Label, das die Seite beschreibt.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`url`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Pfad, zu dem das Navigationselement verlinkt.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`isActive`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob das Navigationselement aktiv ist.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`position`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Bestimmt die Platzierung des Navigationselements (oben oder unten).</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+## Varianten
+
+###  NavigationItem
+
+
+<Canvas of={NavigationItemStories.Bottom} />
+
+**Beispiel:**
+```tsx
+<NavigationItem
+  icon={<AccountBalanceOutlined />}
+  label="Konten"
+  url="/"
+  isActive={false}
+  position={false}
+/>

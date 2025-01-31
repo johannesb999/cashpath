@@ -1,0 +1,58 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button-Komponente
+---
+Die **Button**-Komponente ist ein zentrales Element für Benutzerinteraktionen in Ihrer Anwendung. Sie unterstützt verschiedene Varianten, die für spezifische Anwendungsfälle geeignet sind, und bietet Flexibilität in Design und Funktionalität.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`children`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`ReactNode`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Inhalt des Buttons. Kann Text, Icons oder andere Elemente enthalten.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`round`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob der Button rund dargestellt wird.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`enabled`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob der Button aktiviert oder deaktiviert ist.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`onClick`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`function`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Funktion, die beim Klicken des Buttons ausgeführt wird.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Varianten
+
+Hier sind die verschiedenen Varianten der Button-Komponente:
+
+### Standard-Button
+Der Standard-Button zeigt ein Icon oder Text an und wird für allgemeine Aktionen verwendet.
+
+<Canvas of={ButtonStories._Button} />
+
+**Beispiel:**
+```tsx
+<Button>
+  <AddOutlined />
+</Button>

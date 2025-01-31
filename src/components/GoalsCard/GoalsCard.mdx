@@ -1,0 +1,73 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as GoalsCardStories from './GoalsCard.stories';
+
+<Meta of={GoalsCardStories} />
+
+# GoalsCard-Komponente
+---
+Die **GoalsCard**-Komponente zeigt Informationen zu einem Ziel an, einschließlich Name, Bild, Beschreibung, Datum, Fortschritt und Preis. Sie wird genutzt für die übersichtlichen Darstellung von Sparzielen oder langfristigen Projekten.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`title`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Name des Ziels.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`img`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Die Quelle des Bildes, das das Ziel repräsentiert.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`description`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Eine kurze Beschreibung des Ziels.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`date`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das Datum, bis zu dem das Ziel voraussichtlich erreicht wird.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`progress`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Fortschritt in Prozent (0–100), der bereits erreicht wurde.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`price`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Gesamtpreis oder Betrag, der für das Ziel benötigt wird.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Varianten
+
+### Standard
+
+
+<Canvas of={GoalsCardStories.Default} />
+
+**Beispiel:**
+```tsx
+<GoalsCard
+  title="Lorem Ipsum"
+  img={Image}
+  alt="Image of Tesla"
+  description="Lorem Ipsum dolor sit."
+  date="wahrsch. bis xxxx"
+  progress={60}
+  price={1300}
+/>

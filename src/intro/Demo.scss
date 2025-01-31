@@ -1,0 +1,214 @@
+@use '../scss/config.scss';
+@use '../scss/theme.scss';
+@use '../scss/type.scss';
+
+
+.#{config.$prefix}--main {
+  display: flex;
+  flex-direction: column;
+  block-size: 100vh;
+  background-color: theme.token(layer-0);
+}
+
+main {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  padding-block-end: theme.token(spacing-10);
+}
+
+
+.#{config.$prefix}--main> :first-child {
+  flex-shrink: 0;
+}
+
+.#{config.$prefix}--main> :nth-child(2) {
+  flex-grow: 1;
+  overflow-y: auto;
+  align-self: center;
+}
+
+.#{config.$prefix}--main> :last-child {
+  flex-shrink: 0;
+}
+
+.#{config.$prefix}--button-wrapper {
+  position: absolute;
+  inset-block-end: 4.5rem;
+  inset-inline-end: theme.token(spacing-4);
+}
+
+.#{config.$prefix}--content-screens {
+  box-sizing: border-box;
+  inline-size: 100%;
+  padding-inline: theme.token(spacing-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.#{config.$prefix}--100section {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.#{config.$prefix}--100header {
+  inline-size: 100%;
+  margin-block-end: -0.625rem;
+}
+
+
+
+.#{config.$prefix}--spacer-xl {
+  margin: theme.token(spacing-11);
+}
+
+.#{config.$prefix}--spacer-xl-bottom {
+  margin-block-end: theme.token(spacing-10);
+}
+
+.#{config.$prefix}--spacer-lg {
+  margin: theme.token(spacing-7);
+}
+
+.#{config.$prefix}--spacer-md {
+  margin: theme.token(spacing-4);
+}
+
+.#{config.$prefix}--spacer-md-bottom {
+  margin-block-end: theme.token(spacing-7);
+}
+
+.#{config.$prefix}--spacer-sm {
+  margin: theme.token(spacing-1);
+}
+
+// button
+.#{config.$prefix}--button {
+
+  &.round {
+    min-block-size: fit-content;
+    min-inline-size: 2.7rem;
+    align-items: center;
+  }
+}
+
+// budget screen
+.#{config.$prefix}--budgets-wrapper {
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: theme.token(spacing-5);
+  row-gap: theme.token(spacing-2);
+  margin-block-start: theme.token(spacing-10);
+}
+
+.#{config.$prefix}--budgets-wrapper>*:nth-child(3n + 1) {
+  justify-self: start;
+}
+
+.#{config.$prefix}--budgets-wrapper>*:nth-child(3n + 2) {
+  justify-self: center;
+}
+
+.#{config.$prefix}--budgets-wrapper>*:nth-child(3n) {
+  justify-self: end;
+}
+
+// account screen
+.#{config.$prefix}--liquid {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: -0.625rem;
+
+  &.not {
+    margin-block-start: theme.token(spacing-10);
+  }
+}
+
+.#{config.$prefix}--balance-sum {
+  @include type.L-Title-Style();
+}
+
+// chartScreen
+.#{config.$prefix}--chartWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-items: baseline;
+  align-items: baseline;
+  margin-block-start: -1rem;
+}
+
+.#{config.$prefix}--chartValue {
+  @include type.L-Header-Style();
+  color: theme.token(text-color-1);
+  margin-block-start: theme.token(spacing-2);
+  margin-block-end: theme.token(spacing-2);
+  padding-inline-end: theme.token(spacing-9);
+}
+
+.#{config.$prefix}--chartValueLabel {
+  // margin-block-start: theme.token(margin-sm);
+  @include type.L-Title-Style();
+  color: theme.token(layer-4);
+}
+
+.#{config.$prefix}--chartValueLabelWarning {
+  @include type.L-Title-Style();
+  color: theme.token(color-1);
+}
+
+.#{config.$prefix}--chart__container {
+  inline-size: max-content;
+  block-size: max-content;
+  max-block-size: 12rem;
+  min-inline-size: 95%;
+  align-self: center;
+}
+
+.#{config.$prefix}--chart {
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+}
+
+// GoalDetail screen
+.#{config.$prefix}--goal-detail-img {
+  inline-size: 100%;
+  border-radius: theme.token(radius-md);
+  margin-block-end: theme.token(spacing-7);
+}
+
+.#{config.$prefix}--goal-content {
+  inline-size: 100%;
+}
+
+.#{config.$prefix}--goal-detail-desscription {
+  margin-block-start: -1rem;
+  @include type.L-Label-Style();
+}
+
+.#{config.$prefix}--goal-detail-amount {
+  @include type.L-Title-Style();
+}
+
+.#{config.$prefix}--goal-detail-desc {
+  @include type.L-Title-Style();
+}
+
+.#{config.$prefix}--goal-detail-date {
+  @include type.L-Label-Style();
+  margin-block-start: -1rem;
+  color: theme.token(text-color-3);
+}

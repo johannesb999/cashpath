@@ -1,0 +1,60 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/type';
+
+.#{config.$prefix}--networth-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-inline-size: fit-content;
+  max-block-size: fit-content;
+  position: relative;
+}
+
+.#{config.$prefix}--networth {
+  position: relative;
+}
+
+.#{config.$prefix}--networth-chart {
+  transform: rotate(-90deg);
+  background-color: theme.token(layer-3);
+  border-radius: 50%;
+}
+
+.#{config.$prefix}--networth-circle-bg {
+  stroke: theme.token(layer-3);
+}
+
+.#{config.$prefix}--networth-circle-progress {
+  stroke: theme.token(layer-4);
+  // stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.#{config.$prefix}--networth-icon {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -51%);
+  inline-size: 90%;
+  block-size: 90%;
+}
+
+.#{config.$prefix}--networth-img {
+  inline-size: 100%;
+  block-size: 100%;
+  filter: blur(0.219rem);
+  overflow: hidden;
+}
+
+.#{config.$prefix}--value {
+  @include type.L-Header-Style('-fat');
+  color: theme.token(text-color-2);
+  background-color: transparent;
+  position: absolute;
+  inset-block-start: 70%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}

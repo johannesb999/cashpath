@@ -1,0 +1,63 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as NetworthStories from './Networth.stories';
+
+<Meta of={NetworthStories} />
+
+# Networth-Komponente
+
+Die **Networth**-Komponente dient zur Visualisierung des aktuellen Vermögens in Bezug auf ein gesetztes Ziel (Gesamtvermögen). 
+
+---
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`backImg`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das Hintergrundbild oder Profilbild, das die Komponente anzeigt.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`progress`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der aktuelle Fortschritt oder das aktuelle Vermögen.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`value`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das Vermögen, das als Ziel definiert wurde.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`size`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Die Größe der Komponente in Pixeln.</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Varianten
+
+### Standard
+
+Die Standard-Variante zeigt ein Hintergrundbild, den aktuellen Fortschritt und den Zielwert an. Die Komponentengröße ist anpassbar.
+
+<Canvas of={NetworthStories._Networth} />
+
+**Beispiel:**
+```tsx
+<Networth
+  backImg={Profile}
+  progress={32000}
+  value={1000000}
+  size={300}
+/>

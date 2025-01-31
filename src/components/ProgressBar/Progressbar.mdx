@@ -1,0 +1,78 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ProgressBarStories from './Progressbar.stories';
+
+<Meta of={ProgressBarStories} />
+
+# ProgressBar-Komponente
+---
+
+Die **ProgressBar**-Komponente zeigt den Fortschritt eines Prozesses oder einer Aufgabe an.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`isValue`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der aktuelle Fortschrittswert.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`maxValue`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der maximale Wert für die Fortschrittsanzeige.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`showValue`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob der aktuelle Wert oder der Prozentsatz angezeigt wird.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`showPercent`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob der Fortschritt als Prozentsatz angezeigt wird.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`showLabel`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Zeigt das Label mit dem Prozentsatz neben der Fortschrittsanzeige.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`remaining`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Zeigt die Differenz zwischen dem aktuellen und dem maximalen Wert.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`barLabels`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Zeigt Labels über und unter der Fortschrittsanzeige (für aktuellen Wert und Differenz).</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Varianten
+
+### Standard
+
+Die Standard-Variante zeigt eine einfache Fortschrittsanzeige mit dem aktuellen Fortschrittswert.
+
+<Canvas of={ProgressBarStories.Default} />
+
+**Beispiel:**
+```tsx
+<ProgressBar
+  isValue={72}
+  maxValue={210}
+  showLabel={false}
+  remaining={false}
+  barLabels={false}
+/>

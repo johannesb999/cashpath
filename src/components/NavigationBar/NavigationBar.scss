@@ -1,0 +1,27 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+
+.#{config.$prefix}--navigation-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 0;
+}
+
+.#{config.$prefix}--navigation-bar a {
+    margin-inline-start: -0.063rem;
+}
+
+.#{config.$prefix}--navigation-bar a:first-child {
+    margin-inline-start: 0;
+
+    &.active {
+        border: 0.125rem solid transparent;
+    }
+}
+
+.#{config.$prefix}--navigation-bar a:last-child {
+    &.active {
+        border: 0.125rem solid transparent;
+    }
+}

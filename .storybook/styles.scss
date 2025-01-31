@@ -1,0 +1,13 @@
+@use "../src/scss/theme.scss";
+@use "fonts.css";
+
+:root {
+  @include theme.emit(theme.$light);
+  font-family: Lato;
+  
+}
+
+:root[data-theme="dark"] {
+  @include theme.emit(theme.$dark);
+  font-family: Lato;
+}

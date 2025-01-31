@@ -1,0 +1,16 @@
+@use 'theme' ;
+
+@mixin good {
+  background-color: theme.token('layer-4');
+  stroke: theme.token('layer-4');
+}
+
+@mixin warning {
+  background-color: theme.token('color-1');
+  stroke: theme.token('color-1');
+}
+
+@mixin alert {
+  background-color: theme.token('color-2');
+  stroke: theme.token('color-2');
+}

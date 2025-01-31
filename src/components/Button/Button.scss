@@ -1,0 +1,39 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/type';
+
+.#{config.$prefix}--button {
+    @include type.L-CLabel-Style();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: theme.token(text-color-1);
+    background-color: theme.token(layer-5);
+    border-radius: theme.token(radius-md);
+    padding: theme.token(spacing-4);
+    box-shadow: 0 0 1.25rem rgba(160, 160, 160, 0.5);
+    border: 0.125rem solid theme.token(layer-5);
+    max-inline-size: auto;
+    max-block-size: auto;
+    cursor: pointer;
+
+    &.round {
+        border-radius: 50%;
+    }
+
+    &:disabled {
+        color: theme.token(text-color-2);
+        background-color: theme.token(layer-5-disabled);
+    }
+
+
+}
+
+.#{config.$prefix}--button:has(img) {
+    padding: theme.token(spacing-1);
+}
+
+.#{config.$prefix}--button img {
+    inline-size: 200%;
+    block-size: 200%;
+}

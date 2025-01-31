@@ -1,0 +1,58 @@
+import './typo.css'; 
+
+<div className="typo-title">Typographie Guidelines</div>
+---
+<div className="typo-header">Schriftart:</div>
+
+<div className="box">Lato</div>
+
+<div className="typo-header">Schriftstärken:</div>
+<div className= "box">
+      <div className="font_weight_100">Textbeispiel Schriftstärke Thin 100</div>
+      <div className="font_weight_300">Textbeispiel Schriftstärke Light 300</div>
+      <div className="font_weight_400">Textbeispiel Schriftstärke Regular 400</div>
+      <div className="font_weight_700">Textbeispiel Schriftstärke Bold 700</div>
+      <div className="font_weight_900">Textbeispiel Schriftstärke Black 900</div>
+</div>
+
+
+<div className="typo-header">Schriftgrößen</div>
+
+<div className= "box">
+    <div className="font_size_sm">12px Textbeispiel Schriftgröße sm </div>
+    <div className="font_size_sm-md">14px Textbeispiel Schriftgröße sm-md </div>
+    <div className="font_size_md">16px Textbeispiel Schriftgröße md</div>
+    <div className="font_size_lg">22px Textbeispiel Schriftgröße lg</div>
+    <div className="font_size_xl">32px Textbeispiel Schriftgröße xl</div>
+    <div className="font_size_xxl">48px Textbeispiel Schriftgröße xxl</div>
+</div>
+
+
+<div className="typo-title">Typographie Guidelines</div>
+---
+
+Wir verwenden SCSS-Mixins, um konsistente Typografiestile anzuwenden. Nachfolgend finden Sie eine Übersicht der verfügbaren Mixins und deren Verwendungszweck.
+
+<div className="typo-header">Display Stil:</div>
+
+Das Mixin `L-Display-Style` wird für prominente Überschriften oder Titel verwendet. Es unterstützt die folgenden Varianten:
+- Regular (Standard)
+- Semibold
+- Bold
+
+```scss
+@mixin L-Display-Style($variant: null) {
+  font-family: Lato, sans-serif;
+  font-size: theme.token(font-size-xxl);
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @if $variant == '-semibold' {
+    font-weight: theme.token(font-weight-semibold);
+  } @else if $variant == '-bold' {
+    font-weight: theme.token(font-weight-bold);
+  } @else {
+    font-weight: theme.token(font-weight-regular);
+  }
+}

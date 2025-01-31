@@ -1,0 +1,39 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/type';
+
+.#{config.$prefix}--navigation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: theme.token(text-color-1);
+  cursor: pointer;
+
+  background-color: theme.token(layer-1);
+  border: 0.125rem solid theme.token(layer-3);
+
+  padding-block: theme.token(spacing-4);
+
+  &.active.bottom {
+    color: theme.token(layer-4);
+    background-color: transparent;
+    border-block-start: 0.125rem solid transparent;
+    border-block-end: 0.125rem solid transparent;
+  }
+
+  &.active.top {
+    color: theme.token(color-1);
+    background-color: transparent;
+    border-block-start: 0.125rem solid transparent;
+    border-block-end: 0.125rem solid transparent;
+  }
+
+  .icon {
+    align-items: center;
+  }
+
+  .label {
+    @include type.L-Label-Style();
+  }
+}

@@ -1,0 +1,93 @@
+.css-qa4clq :where(div:not(.sb-anchor, .sb-unstyled, .sb-unstyled div)) {
+    font-family: Lato !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+}
+
+
+main {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.box {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.typo-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    padding-top: 0.5rem;
+}
+
+.typo-header {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    padding-top: 1rem;
+    text-decoration: underline 1px solid hsla(203, 50%, 30%, 0.15);
+    text-underline-offset: 3px;
+}
+
+
+.font_weight_100,
+.font_weight_300,
+.font_weight_400,
+.font_weight_700,
+.font_weight_900,
+.font_size_sm,
+.font_size_sm-md,
+.font_size_md,
+.font_size_lg,
+.font_size_xl,
+.font_size_xxl {
+    padding-bottom: 1rem;
+}
+
+
+
+
+.font_weight_100 {
+    font-weight: 100 !important;
+}
+
+.font_weight_300 {
+    font-weight: 300 !important;
+}
+
+.font_weight_400 {
+    font-weight: 400 !important;
+}
+
+.font_weight_700 {
+    font-weight: 700 !important;
+}
+
+.font_weight_900 {
+    font-weight: 900 !important;
+}
+
+.font_size_sm {
+    font-size: 12px !important;
+}
+
+.font_size_sm-md {
+    font-size: 14px !important;
+}
+
+.font_size_md {
+    font-size: 1rem !important;
+}
+
+.font_size_lg {
+    font-size: 22px !important;
+}
+
+.font_size_xl {
+    font-size: 32px !important;
+}
+
+.font_size_xxl {
+    font-size: 48px !important;
+}

@@ -1,0 +1,146 @@
+// @mixin h1($variant: null) {
+//     font-family: Lato, sans-serif;
+//     font-size: 2.5rem;
+//     line-height: normal;
+
+//     @if $variant == '-semibold' {
+// font-weight: theme.token(font-weight-semibold)//     } @else if $variant == '-bold' {
+//         font-weight: theme.token(font-weight-bold)
+//     } @else {
+//         font-weight: theme.token(font-weight-regular)
+//     }
+// }
+
+// @mixin h2($variant: null) {
+//     font-family: Lato, sans-serif;
+//     font-size: 2rem;
+//     line-height: normal;
+
+//     @if $variant == '-semibold' {
+// font-weight: theme.token(font-weight-semibold)//     } @else if $variant == '-bold' {
+//         font-weight: theme.token(font-weight-bold)
+//     } @else {
+//         font-weight: theme.token(font-weight-regular)
+//     }
+// }
+
+// @mixin h3($variant: null) {
+//     font-family: Lato, sans-serif;
+//     font-size: 1.75rem;
+//     line-height: normal;
+
+//     @if $variant == '-semibold' {
+// font-weight: theme.token(font-weight-semibold)//     } @else if $variant == '-bold' {
+//         font-weight: theme.token(font-weight-bold)
+//     } @else {
+//         font-weight: theme.token(font-weight-regular)
+//     }
+// }
+
+@use "config.scss";
+@use "theme.scss";
+
+
+@mixin L-Display-Style($variant: null) {
+    font-family: Lato, sans-serif;
+    font-size: theme.token(font-size-xxl);
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    @if $variant =='-semibold' {
+        font-weight: theme.token(font-weight-semibold)
+    }
+
+    @else if $variant =='-bold' {
+        font-weight: theme.token(font-weight-bold)
+    }
+
+    @else {
+        font-weight: theme.token(font-weight-regular)
+    }
+}
+
+@mixin L-Header-Style($variant: null) {
+    font-family: Lato, sans-serif;
+    font-size: theme.token(font-size-xl);
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    @if $variant =='-semibold' {
+        font-weight: theme.token(font-weight-semibold)
+    }
+
+    @else if $variant =='-bold' {
+        font-weight: theme.token(font-weight-bold)
+    }
+
+    @else if $variant =='-fat' {
+        font-weight: 900;
+    }
+
+    @else {
+        font-weight: theme.token(font-weight-regular)
+    }
+}
+
+@mixin L-Title-Style($variant: null) {
+    font-family: Lato, sans-serif;
+    font-size: theme.token(font-size-lg);
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    @if $variant =='-semibold' {
+        font-weight: theme.token(font-weight-semibold)
+    }
+
+    @else if $variant =='-bold' {
+        font-weight: theme.token(font-weight-bold)
+    }
+
+    @else {
+        font-weight: theme.token(font-weight-regular)
+    }
+}
+
+@mixin L-Label-Style($variant: null) {
+    font-family: Lato, sans-serif;
+    font-size: theme.token(font-size-md);
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    @if $variant =='-semibold' {
+        font-weight: theme.token(font-weight-semibold)
+    }
+
+    @else if $variant =='-bold' {
+        font-weight: theme.token(font-weight-bold)
+    }
+
+    @else {
+        font-weight: theme.token(font-weight-regular)
+    }
+}
+
+@mixin L-CLabel-Style($variant: null) {
+    font-family: Lato, sans-serif;
+    font-size: theme.token(font-size-sm-md);
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    @if $variant =='-semibold' {
+        font-weight: theme.token(font-weight-semibold)
+    }
+
+    @else if $variant =='-bold' {
+        font-weight: theme.token(font-weight-bold)
+    }
+
+    @else {
+        font-weight: theme.token(font-weight-regular)
+    }
+}

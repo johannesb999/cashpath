@@ -1,0 +1,38 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/type';
+
+.#{config.$prefix}--timeSelect-wrapper {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  &.extended {
+    justify-content: space-between;
+  }
+}
+
+.#{config.$prefix}--timeSelect-item {
+  appearance: none;
+  all: unset;
+  background-color: theme.token(layer-3);
+  border-radius: theme.token(radius-sm);
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+  inline-size: 2.125rem;
+  block-size: 1.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @include type.L-CLabel-Style($variant: -semibold);
+
+  &.active {
+    background-color: theme.token(layer-4);
+  }
+
+  &.active.negative {
+    background-color: theme.token(color-1);
+  }
+}

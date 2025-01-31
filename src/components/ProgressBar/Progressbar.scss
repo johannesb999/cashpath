@@ -1,0 +1,99 @@
+@use '../../scss/theme';
+@use '../../scss/config';
+@use '../../scss/status';
+@use '../../scss/type';
+
+
+.#{config.$prefix}--progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: theme.token(spacing-1);
+  inline-size: 100%;
+
+  .#{config.$prefix}--progress-bar-labels {
+    inline-size: 100%;
+    display: flex;
+    position: relative;
+
+    &.top {
+      // Label oben
+      justify-content: flex-start;
+
+      .label-top {
+        position: relative;
+        margin-inline-start: clamp(0,
+            calc(var(--isValuePercentage, 0) * 1% - 8.75rem),
+            calc(100% - 8.75rem));
+      }
+    }
+
+    &.bottom {
+      // Label unten
+      justify-content: flex-end;
+
+      .label-bottom {
+        position: relative;
+        margin-inline-end: calc(var(--isValuePercentage, 0) * 1% - 1.25rem);
+      }
+    }
+
+    .label-top,
+    .label-bottom {
+      @include type.L-CLabel-Style('-fat');
+      color: theme.token(text-color-1);
+      padding: theme.token(spacing-1) theme.token(spacing-4);
+      border-radius: theme.token('radius-sm');
+      white-space: nowrap;
+    }
+  }
+}
+
+.#{config.$prefix}--progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: theme.token(spacing-2);
+  inline-size: 100%;
+
+  .max-value {
+    @include type.L-CLabel-Style();
+    color: theme.token(text-color-1);
+    white-space: nowrap;
+  }
+}
+
+.#{config.$prefix}--progress-bar {
+  position: relative;
+  inline-size: 90%;
+  block-size: 0.563rem;
+  background-color: theme.token('layer-1');
+  border-radius: theme.token('radius-sm');
+  overflow: hidden;
+  min-inline-size: 6.5rem;
+
+  &_fill {
+    position: absolute;
+    block-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    transition: inline-size 0.3s ease-in-out;
+
+  }
+
+  &--good {
+    @include status.good;
+  }
+
+  &--warning {
+    @include status.warning;
+  }
+
+  &--alert {
+    @include status.alert;
+  }
+}
+
+.progress-value {
+  @include type.L-CLabel-Style();
+  color: theme.token(text-color-1);
+}

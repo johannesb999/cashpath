@@ -1,0 +1,88 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as BudgetStories from './Budget.stories';
+
+<Meta of={BudgetStories} />
+
+# Budget-Komponente
+---
+Die **Budget**-Komponente dient zur Visualisierung von Budgets und deren Fortschritt in verschiedenen Zeitrahmen wie Woche, Monat oder Jahr. Sie ermöglicht eine klare und intuitive Darstellung von finanziellen Daten.
+
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>    
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`title`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`string`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Definition wofür das Budget steht.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`icon`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`ReactNode`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das Symbol, das die Kategorie des Budgets repräsentiert.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`size`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Die Größe der Komponente in Pixeln.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`timeFrame`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Der Zeitrahmen für das Budget (1=Woche, 2=Monat, 3=Jahr).</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`monthVal`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Das monatliche Budget. Basierend darauf werden Wochen- und Jahreswerte berechnet.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`weeklyProgress`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Bisher ausgegebener Betrag in dieser Woche.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`monthlyProgress`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Bisher ausgegebener Betrag in diesem Monat.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`yearlyProgress`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`number`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Bisher ausgegebener Betrag in diesem Jahr.</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+## Varianten
+
+### Standard
+
+Die Standard-Variante zeigt ein Budget mit einem Icon, das anzeigt wofür es ist, den Fortschrittswerten für gesetztes Zeitfenster (Dounutchart außenrum), und den Maximalwert das Budgets (darunter).
+
+<Canvas of={BudgetStories._Budget} />
+
+**Beispiel:**
+```tsx
+<Budget
+  icon={<ShoppingCartOutlined />}
+  size={80}
+  timeFrame={1}
+  monthVal={350}
+  weeklyProgress={80}
+  monthlyProgress={200}
+  yearlyProgress={2600}
+  title="Einkaufen"
+/>

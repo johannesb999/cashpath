@@ -1,0 +1,44 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TimeSelectStories from './TimeSelect.stories';
+
+<Meta of={TimeSelectStories} />
+
+# TimeSelect-Komponente
+---
+Die **TimeSelect**-Komponente dient zur Auswahl von zeitfenstern, um andere Komponenten zu steuern.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`extended`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`boolean`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Gibt an, ob die Optionen "Tag" und "Allzeit" angezeigt werden sollen.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+## Varianten
+
+### Erweiterte Ansicht
+
+Die erweiterte Ansicht zeigt zusätzliche Optionen wie "Day" und "Alltime", ansonsten nur "Week", "Month" und "Year".
+
+<Canvas of={TimeSelectStories._TimeSelect} />
+
+**Beispiel:**
+```tsx
+<TimeSelect
+  extended={true}
+/>

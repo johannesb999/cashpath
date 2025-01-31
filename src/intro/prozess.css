@@ -1,0 +1,52 @@
+.css-qa4clq :where(div:not(.sb-anchor, .sb-unstyled, .sb-unstyled div)) {
+    font-family: Lato !important;
+    /* margin: 0 !important; */
+    /* font-size: 16px !important; */
+}
+
+main {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.box {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.prozess-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    padding-top: 0.5rem;
+}
+
+.prozess-header {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    padding-top: 1rem;
+    text-decoration: underline 1px solid hsla(203, 50%, 30%, 0.15);
+    text-underline-offset: 3px;
+}
+
+.prozessbox {
+    display: flex;
+    padding: 1rem;
+}
+
+
+.prozessPic {
+    height: 7rem;
+    width: auto;
+    border-radius: 2rem;
+    display: flex;
+}
+
+.wirePic {
+    height: auto;
+    width: auto;
+    border: 2px solid rgb(190, 190, 190);
+    margin-top: 3rem;
+    border-radius: 2rem;
+    display: flex;
+}

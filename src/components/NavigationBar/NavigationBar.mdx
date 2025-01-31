@@ -1,0 +1,56 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as NavigationBarStories from './NavigationBar.stories';
+
+<Meta of={NavigationBarStories} />
+
+# NavigationBar-Komponente
+---
+Die NavigationBar ist ein Wrapper, in dem NavigationItems geladen werden können.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`items`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`Array<{ icon: JSX.Element, label: string, url: string, isActive: boolean, position: boolean }>`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>
+        Ein Array mit Navigationselementen:
+        <ul>
+          <li><code>icon</code>: Das Icon, das das Navigationselement repräsentiert.</li>
+          <li><code>label</code>: Die Beschriftung des Navigationselements.</li>
+          <li><code>url</code>: Der URL-Pfad, auf den verwiesen wird.</li>
+          <li><code>isActive</code>: Gibt an, ob das Navigationselement aktiv ist.</li>
+          <li><code>position</code>: Gibt an, ob das Element für die obere Navigation (<code>true</code>) oder die untere Navigation (<code>false</code>) vorgesehen ist.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Varianten
+
+### Bottom Navigation
+
+
+<Canvas of={NavigationBarStories.Bottom} />
+
+**Beispiel:**
+```tsx
+<NavigationBar
+  items={[
+    { icon: <AccountBalanceOutlined />, label: 'Konten', url: '/', isActive: false, position: false },
+    { icon: <BarChartOutlined />, label: 'Anlagen', url: '/favorites', isActive: true, position: false },
+    { icon: <WatchOutlined />, label: 'Objekte', url: '/favorites', isActive: false, position: false },
+  ]}
+/>

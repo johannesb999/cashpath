@@ -1,0 +1,83 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as WrapperStories from './Wrapper.stories';
+
+<Meta of={WrapperStories} />
+
+# Wrapper-Komponente
+---
+Die **Wrapper**-Komponente dient als Container für andere Komponenten und ermöglicht das Gruppieren und Anordnen von Inhalten wie **GoalsCard** und **AccountCard**.
+
+
+## Eigenschaften (Props)
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Prop</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Typ</th>
+      <th style={{ textAlign: 'left', padding: '8px', borderBottom: '2px solid #ddd' }}>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`children`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>`ReactNode`</td>
+      <td style={{ padding: '8px', borderBottom: '1px solid #ddd' }}>Die Inhalte, die der Wrapper enthält, z. B. **GoalsCard**- oder **AccountCard**-Komponenten.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+## Varianten
+
+### Goals
+
+Diese Variante zeigt eine Sammlung von **GoalsCard**-Komponenten, die verschiedene Ziele darstellen Siehe GoalsCard.
+
+<Canvas of={WrapperStories.Goals} />
+
+**Beispiel:**
+```tsx
+<Wrapper>
+  {[
+    {
+      title: "Tesla Model S",
+      img: Tesla,
+      alt: "Roter Tesla Model S",
+      description: "Auto",
+      date: "wahrsch. bis 2030",
+      progress: 60,
+      price: 92990,
+    },
+    {
+      title: "Villa in Madeira am Meer",
+      img: Villa,
+      alt: "Villa in Madeira am Meer",
+      description: "Description for Goal 2",
+      date: "wahrsch. bis 2050",
+      progress: 0,
+      price: 1000000,
+    },
+    {
+      title: "Louis Beton",
+      img: Betong,
+      alt: "Louis Beton Handtasche",
+      description: "Description for Louis Beton Handtasche",
+      date: "wahrsch. bis 2053",
+      progress: 0,
+      price: 2500,
+    },
+  ].map((card, index) => (
+    <GoalsCard
+      key={index}
+      title={card.title}
+      img={card.img}
+      alt={card.alt}
+      description={card.description}
+      date={card.date}
+      progress={card.progress}
+      price={card.price}
+    />
+  ))}
+</Wrapper>

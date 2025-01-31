@@ -1,0 +1,27 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/status';
+
+.#{config.$prefix}--chart__container {
+  all: unset;
+  inline-size: 100%;
+  block-size: 15rem;
+}
+
+.#{config.$prefix}--chart {
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+
+  &--good {
+    @include status.good;
+  }
+
+  &--warning {
+    @include status.warning;
+  }
+
+  &--alert {
+    @include status.alert;
+  }
+}

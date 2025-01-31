@@ -1,0 +1,70 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/type';
+
+.#{config.$prefix}--card {
+  box-sizing: border-box;
+  background-color: theme.token(layer-3);
+  border-radius: theme.token(radius-md);
+  padding: theme.token(spacing-6);
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  color: theme.token(text-color-1);
+}
+
+.#{config.$prefix}--card-content {
+  all: unset;
+  display: flex;
+  gap: theme.token(spacing-3);
+  align-items: center;
+  block-size: 100%;
+}
+
+.#{config.$prefix}--card-title {
+  @include type.L-Label-Style('-bold');
+  margin: 0;
+}
+
+.#{config.$prefix}--card-date {
+  @include type.L-Label-Style();
+  margin: 0;
+  color: theme.token(text-color-3);
+}
+
+.#{config.$prefix}--progress {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0;
+  margin-block-start: theme.token(spacing-1);
+  inline-size: 100%;
+}
+
+.#{config.$prefix}--card-price {
+  @include type.L-Label-Style('-bold');
+  text-align: end;
+  margin: 0;
+  padding-inline-start: theme.token(spacing-4);
+  min-inline-size: 4rem;
+  color: theme.token(text-color-1);
+}
+
+.#{config.$prefix}--card-text-content {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: theme.token(spacing-2);
+  gap: theme.token(spacing-1);
+  inline-size: 100%;
+}
+
+.#{config.$prefix}--card-img {
+  max-inline-size: 3.563rem;
+  block-size: 3.563rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.#{config.$prefix}--card-drag-icon {
+  cursor: grab;
+}

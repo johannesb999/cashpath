@@ -1,0 +1,59 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+@use '../../scss/status';
+@use '../../scss/type';
+
+.#{config.$prefix}--budget-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  max-inline-size: fit-content;
+  max-block-size: fit-content;
+}
+
+.#{config.$prefix}--budget {
+  position: relative;
+}
+
+.#{config.$prefix}--budget-chart {
+  transform: rotate(-90deg);
+  background-color: theme.token(layer-1);
+  border-radius: 50%;
+}
+
+.#{config.$prefix}--budget-circle-bg {
+  stroke: theme.token(layer-3);
+}
+
+.#{config.$prefix}--budget-circle-progress {
+  stroke: var(--progress-color, #ffffff);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+
+  &--good {
+    @include status.good;
+  }
+
+  &--warning {
+    @include status.warning;
+  }
+
+  &--alert {
+    @include status.alert;
+  }
+}
+
+.#{config.$prefix}--budget-icon {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.#{config.$prefix}--value-budget {
+  @include type.L-Label-Style('-bold');
+  margin-block-start: theme.token(spacing-2);
+  color: theme.token(text-color-1);
+}

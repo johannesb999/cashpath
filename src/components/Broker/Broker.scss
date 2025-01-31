@@ -1,0 +1,27 @@
+@use '../../scss/config';
+@use '../../scss/theme';
+
+.#{config.$prefix}--broker {
+    inline-size: 100%;
+    background-color: theme.token(layer-0);
+    max-block-size: fit-content;
+    padding: 0;
+
+    & h2 {
+        font-family: Lato;
+        margin-block-end: 0;
+        color: theme.token(text-color-1);
+    }
+}
+
+.#{config.$prefix}--broker-container {
+    display: flex;
+    gap: theme.token(spacing-2);
+}
+
+.#{config.$prefix}--broker-wrapper {
+    margin-block-start: theme.token(spacing-5);
+    display: flex;
+    max-block-size: fit-content;
+    gap: theme.token(spacing-4);
+}
