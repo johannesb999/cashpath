@@ -5,6 +5,10 @@ on:
     tags:
       - v*
 
+permissions:
+  packages: write
+  contents: read
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
