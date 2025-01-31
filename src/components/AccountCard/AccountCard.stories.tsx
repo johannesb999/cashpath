@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AccountCard } from './AccountCard.tsx';
-import Image from '../../icons/n26.svg';
+import Image from '../../icons/N26.svg';
 import Netflix from '../../icons/netflix.svg';
 import './AccountCard.scss';
 
