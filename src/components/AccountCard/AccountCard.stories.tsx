@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AccountCard } from './AccountCard.tsx';
 import Image from '../../icons/N26.svg';
-import Netflix from '../../icons/netflix.svg';
+import Netflix from '../../icons/Netflix.svg';
 import './AccountCard.scss';
 
 const meta: Meta<typeof AccountCard> = {

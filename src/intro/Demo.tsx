@@ -31,9 +31,7 @@ import Amazon from '../icons/amazon.svg';
 import Aok from '../icons/aok.svg';
 import Getsafe from '../icons/getsafe.svg';
 import Wgv from '../icons/wgv.svg';
-// import btc from '../icons/btc.svg';
-// import cronos from '../icons/cronos.svg';
-// import etherium from '../icons/etherium.svg';
+
 
 import { useEffect, useMemo, useState } from "react";
 import { AccountCard } from "../components/AccountCard/AccountCard";
@@ -604,31 +602,31 @@ function BudgetScreen() {
       aria-labelledby="budgets-tab"
       className={`${prefix}--content-screens`}>
       {/* <section className={`${prefix}--100section`}> */}
-        <header className={`${prefix}--100header`}>
-          <h2>Budgets</h2>
-        </header>
-        <ProgressBar isValue={totalProgress}
-          maxValue={totalValue}
-          showPercent={false}
-          showLabel={true}
-          remaining={true}
-          barLabels={true}></ProgressBar>
-        <div className={`${prefix}--spacer-lg`}></div>
-        <TimeSelect extended={false} setTime={setTime}></TimeSelect>
-        <section className={`${prefix}--budgets-wrapper`}>
-          {budgetData.map((budget, index) => (
-            <Budget
-              key={index}
-              title={budget.title}
-              icon={budget.icon}
-              size={budget.size}
-              timeFrame={Time}
-              monthVal={budget.monthVal}
-              weeklyProgress={budget.weeklyProgress}
-              monthlyProgress={budget.monthlyProgress}
-              yearlyProgress={budget.yearlyProgress}
-            />))}
-        </section>
+      <header className={`${prefix}--100header`}>
+        <h2>Budgets</h2>
+      </header>
+      <ProgressBar isValue={totalProgress}
+        maxValue={totalValue}
+        showPercent={false}
+        showLabel={true}
+        remaining={true}
+        barLabels={true}></ProgressBar>
+      <div className={`${prefix}--spacer-lg`}></div>
+      <TimeSelect extended={false} setTime={setTime}></TimeSelect>
+      <section className={`${prefix}--budgets-wrapper`}>
+        {budgetData.map((budget, index) => (
+          <Budget
+            key={index}
+            title={budget.title}
+            icon={budget.icon}
+            size={budget.size}
+            timeFrame={Time}
+            monthVal={budget.monthVal}
+            weeklyProgress={budget.weeklyProgress}
+            monthlyProgress={budget.monthlyProgress}
+            yearlyProgress={budget.yearlyProgress}
+          />))}
+      </section>
       {/* </section> */}
     </main>
   )
@@ -674,7 +672,7 @@ function ChartScreen({ onChartClick }: ChartScreenProps) {
           <h2>Aktien</h2>
           <div className={`${prefix}--chartWrapper`}>
             <span className={`${prefix}--chartValue`}>12.510 €</span>
-            <span  className={`${prefix}--chartValueLabel`} aria-label={`2.1% ${isAktien < payedAktien ? "verlust" : "gewinn"}`}>2,1%</span>
+            <span className={`${prefix}--chartValueLabel`} aria-label={`2.1% ${isAktien < payedAktien ? "verlust" : "gewinn"}`}>2,1%</span>
           </div>
         </header>
         <TimeSelect extended={true} setTime={setTimeAktien} color={isAktien < payedAktien} />
@@ -705,17 +703,17 @@ function ChartDetails() {
   const accountData = [
     {
       title: "Amazon",
-      img: Amazon, //<img src={btc} alt="logo of N26" />,
+      img: Amazon,
       balance: 8000,
     },
     {
       title: "Netflix",
-      img: Netflix, //<img src={cronos} alt="logo of C24" />,
+      img: Netflix,
       balance: 2310,
     },
     {
       title: "Disney",
-      img: Disney, //<img src={etherium} alt="logo of KsK" />,
+      img: Disney,
       balance: 2190,
     }];
 
