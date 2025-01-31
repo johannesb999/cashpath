@@ -3,7 +3,7 @@ import { Wrapper } from './Wrapper.tsx';
 import { GoalsCard } from '../GoalsCard/GoalsCard.tsx';
 import { AccountCard } from '../AccountCard/AccountCard.tsx';
 
-import Tesla from '../../icons/tesla.svg';
+import Tesla from '../../icons/Tesla.svg';
 import Villa from '../../icons/Villa.svg';
 import Betong from '../../icons/LouisBetong.svg';
 
@@ -72,44 +72,44 @@ export const Goals: Story = {
   },
 };
 
-  const accountData = [
-    {
-      title: "N26",
-      img: N26, //<img src={N26} alt="logo of N26" />,
-      alt:"Logo von N26",
-      description: "DE250420.....5385",
-      balance: 1300,
-      liquid: true
-    },
-    {
-      title: "N26",
-      img: C24, //<img src={C24} alt="logo of C24" />,
-      alt:"Logo von C24",
-      description: "DE250420.....5385",
-      balance: 1300,
-      liquid: true
-    },  
-    {
-      title: "N26",
-      img: KsK, //<img src={KsK} alt="logo of KsK" />,
-      alt:"Logo von KsK",
-      description: "DE250420.....5385",
-      balance: 1300,
-      liquid: true
-    },
-  ]
+const accountData = [
+  {
+    title: "N26",
+    img: N26, //<img src={N26} alt="logo of N26" />,
+    alt: "Logo von N26",
+    description: "DE250420.....5385",
+    balance: 1300,
+    liquid: true
+  },
+  {
+    title: "N26",
+    img: C24, //<img src={C24} alt="logo of C24" />,
+    alt: "Logo von C24",
+    description: "DE250420.....5385",
+    balance: 1300,
+    liquid: true
+  },
+  {
+    title: "N26",
+    img: KsK, //<img src={KsK} alt="logo of KsK" />,
+    alt: "Logo von KsK",
+    description: "DE250420.....5385",
+    balance: 1300,
+    liquid: true
+  },
+]
 
-  export const Accoounts: Story = {
-    args: {
-      children: accountData.map((card, index) => (
-        <AccountCard
-          key={index}
-          title={card.title}
-          img={card.img}
-          description={card.description}
-          balance={card.balance}
-          liquid={card.liquid}
-        />
-      )),
-    },
-  };
+export const Accoounts: Story = {
+  args: {
+    children: accountData.map((card, index) => (
+      <AccountCard
+        key={index}
+        title={card.title}
+        img={card.img}
+        description={card.description}
+        balance={card.balance}
+        liquid={card.liquid}
+      />
+    )),
+  },
+};

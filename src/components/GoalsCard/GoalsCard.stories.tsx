@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { GoalsCard } from './GoalsCard.tsx';
-import Image from '../../icons/tesla.svg';
+import Image from '../../icons/Tesla.svg';
 
 const meta: Meta<typeof GoalsCard> = {
   component: GoalsCard,

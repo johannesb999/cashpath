@@ -16,7 +16,6 @@ import { ShoppingCartOutlined, Payments, AccountBalanceOutlined, BarChartOutline
 import Profile from '../icons/Profile.svg';
 
 import Tesla from '../icons/Tesla_Model_S-01.jpg'
-// import Tesla from '../icons/tesla.svg';
 import Villa from '../icons/Villa.svg';
 import Betong from '../icons/LouisBetong.svg';
 import N26 from '../icons/N26.svg';
