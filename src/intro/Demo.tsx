@@ -24,12 +24,12 @@ import KsK from '../icons/KsK.svg';
 import Bison from '../icons/image-1.svg';
 import Trade from '../icons/image.svg';
 import Postbank from '../icons/Postbank.svg';
-import Netflix from '../icons/netflix.svg';
-import Disney from '../icons/disney.svg';
-import Amazon from '../icons/amazon.svg';
-import Aok from '../icons/aok.svg';
-import Getsafe from '../icons/getsafe.svg';
-import Wgv from '../icons/wgv.svg';
+import Netflix from '../icons/Netflix.svg';
+import Disney from '../icons/Disney.svg';
+import Amazon from '../icons/Amazon.svg';
+import Aok from '../icons/Aok.svg';
+import Getsafe from '../icons/Getsafe.svg';
+import Wgv from '../icons/Wgv.svg';
 
 
 import { useEffect, useMemo, useState } from "react";
