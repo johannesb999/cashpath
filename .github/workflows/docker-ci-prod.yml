@@ -7,13 +7,12 @@ on:
 
 permissions:
   packages: write
+  contents: read
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-
+   
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
