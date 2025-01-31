@@ -13,5 +13,7 @@ COPY . .
 # Expose Storybook port
 EXPOSE 6006
 
+RUN npm run build
+
 # Start Storybook
 CMD ["npm", "run", "storybook"]
